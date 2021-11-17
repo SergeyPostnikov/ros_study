@@ -5,10 +5,6 @@ def cool_sum(a, b):
 
 # print(cool_sum(5, 4)) 
 
-# todo: ООП
-
-
-# todo: Типы в Python и ООП
 
 
 # todo: создание собственных классов(типов)
@@ -31,18 +27,6 @@ class Auto:
 lada = Auto('Kalina') # __init__(lada, 'Kalina')
 subaru = Auto('Impreza')
 
-lada.number = 75643
-lada.is_police = True
-lada.weight = 1500
-# print(f'WIN: {lada.number} is_police: {lada.is_police} weight: {lada.weight}')
-
-# lada.get_data() #get_data(lada)
-
-# def f():
-# 	n = 10
-
-# print(n)
-
 
 # print(lada.name)
 # lada.name = 'Granta'
@@ -54,12 +38,10 @@ lada.weight = 1500
 
 # todo: создание атрибутов
 
-# а)динамических:
 
-# b)статических
-
-# todo: создание функций для экземпляров собственных классов(типов)
-
+lada.number = 75643
+lada.is_police = True
+lada.weight = 1500
 
 # todo: написание коструктора
 class Auto:
