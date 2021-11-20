@@ -38,11 +38,11 @@ class Pizza:
 		self.name = name
 		self.ingredients = []
 
-		def get_name(self):
-			return self.name
+	def get_name(self):
+		return self.name
 
-		def add_ingredient(self, ingredient):
-			self.ingredients.append(ingredient)
+	def add_ingredient(self, ingredient):
+		self.ingredients.append(ingredient)
 
 a = Pizza('with pinapples')
 a.get_name()
