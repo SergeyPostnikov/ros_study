@@ -44,39 +44,53 @@ class Pizza:
 	def add_ingredient(self, ingredient):
 		self.ingredients.append(ingredient)
 
+	def get_cost(self): #- возвращает стоимость пиццы в рублях
+		result = 0
+		for ing in self.ingredients:
+			result += ing.get_cost()
+		return result
+
+	def get_weight(self): # - возвращает вес пиццы в килограммах (1кг=1000г)
+		result = 0
+		for ing in self.ingredients:
+			result += ing.get_weight()
+		return result
+
+
 a = Pizza('with pinapples')
 a.get_name()
 
 class Ingredient:
-    def __init__(self, name, weight, cost):
-        self.name = name
-        self.weight = weight
-        self.cost = cost
+	def __init__(self, name, weight, cost):
+		self.name = name
+		self.weight = weight
+		self.cost = cost
 
-    def get_name(self): # возвращает название ингредиента
-        return self.name
-    
-    def get_weight(self): # возвращает вес в граммах
-        return self.weight 
+	def get_name(self): # возвращает название ингредиента
+		return self.name
+	
+	def get_weight(self): # возвращает вес в граммах
+		return self.weight 
 
-    def get_cost(self): # возвращает стоимость в рублях
-        return self.cost
+	def get_cost(self): # возвращает стоимость в рублях
+		return self.cost
 
-# cream = Ingredient('крем-брюле', 200, 150) # __init__(cream, крем-брюле', 200, 150)
-# cream_sauce = Ingredient('Сливочный соус', 50, 50)
-# blue_cheese = Ingredient('Сыр блю чиз', 100, 100)
-# mozzarella = Ingredient('Моцарелла', 100, 100)
-# cheddar = Ingredient('Чеддер', 100, 100)
-# parmesan = Ingredient('Пармезан', 100, 100)
+cream = Ingredient('крем-брюле', 200, 150) # __init__(cream, крем-брюле', 200, 150)
+cream_sauce = Ingredient('Сливочный соус', 50, 50)
+blue_cheese = Ingredient('Сыр блю чиз', 100, 100)
+mozzarella = Ingredient('Моцарелла', 100, 100)
+cheddar = Ingredient('Чеддер', 100, 100)
+parmesan = Ingredient('Пармезан', 100, 100)
 # print(cream.get_name())
 
-# ten_cheeze_and_cream  = Pizza('Десять сыров и крем-брюле')
-# ten_cheeze_and_cream.add_ingredient(cream)
-# ten_cheeze_and_cream.add_ingredient(cream_sauce)
-# ten_cheeze_and_cream.add_ingredient(blue_cheese)
-# ten_cheeze_and_cream.add_ingredient(cheddar)
+ten_cheeze_and_cream  = Pizza('Десять сыров и крем-брюле')
+ten_cheeze_and_cream.add_ingredient(cream)
+ten_cheeze_and_cream.add_ingredient(cream_sauce)
+ten_cheeze_and_cream.add_ingredient(blue_cheese)
+ten_cheeze_and_cream.add_ingredient(cheddar)
+# print(ten_cheeze_and_cream.ingredients)
 
-
+print(ten_cheeze_and_cream.get_weight())
 
 
 

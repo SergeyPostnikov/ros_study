@@ -28,6 +28,19 @@
 # print(is_div(6, 5))
 
 # c) Class
-import test
-me = test.Person(25, 'Sergey')
-me.say_hello()
+# import test
+# me = test.Person(25, 'Sergey')
+# me.say_hello()
+
+
+# from test import Person
+# me = Person(25, 'Sergey')
+# me.say_hello()
+
+# from test import *
+# me = Person(25, 'Sergey')
+# me.say_hello()
+
+# import test.Person
+# me = Person(25, 'Sergey')
+# me.say_hello()
